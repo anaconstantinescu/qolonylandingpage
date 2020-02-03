@@ -17,6 +17,14 @@ Step 2 (Creating home page):
 		})
 		- do not forget to require module path
 		- to use home directory create folder pages and inside file index.html
-			- in index.html copy from your desired template (I used Agency theme from startbootstrap.com) your index.html content
+			- in index.html copy from your desired template (I used Agency theme from startbootstrap.com) your index.html content or write your own page
 			- move assets from your template in your public folder
-Step 3
+Step 3 (Create other pages: about, team, new post etc):
+- index.json
+	- app.get('/yourPageName', (request, response) => {
+			response.sendFile(path.resolve(__dirname, 'pages/index.html'))
+		}))
+		- in folder pages create file yourPageName.html
+			- in yourPageName.html copy from your desired template page content or write your own page
+			- move assets from your template in your public folder
+		- i do not have separate pages for the moment it is a onepage website
