@@ -14,6 +14,7 @@ app.get('/', (request, response) => {
 })
 
 // ----- Listener
-app.listen(5000, () => {
-	console.log('App listening on port 5000')
-})
+app.listen(process.env.PORT || 5000)
+//app.listen(5000, () => {
+//	console.log('App listening on port 5000')
+//})
